@@ -1,0 +1,10 @@
+package com.hyr.pratice;
+
+public class SumOfIntergs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.hyr.pratice;
+
+public class ArraysPractice {
+	
+
+}

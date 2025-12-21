@@ -1,0 +1,40 @@
+package com;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.model.OldProjectsssss;
+
+public class Application {
+
+	public static void main(String[] args) {
+
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		cfg.addAnnotatedClass(OldProjectsssss.class);
+
+		SessionFactory s = cfg.buildSessionFactory();
+
+		Session session = s.openSession();
+
+		session.beginTransaction();
+
+		//OldProjectsssss e = new OldProjectsssss(8, "256@gmail.com", 20000);
+
+		OldProjectsssss e = new OldProjectsssss(9, "256@gmail.com", 20000);
+
+
+		
+		session.persist(e);
+
+		System.out.println("print");
+		session.getClass();
+		session.getTransaction().commit();
+		System.out.println("Inserted");
+
+	}
+
+}
+
+

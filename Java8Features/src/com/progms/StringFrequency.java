@@ -1,0 +1,57 @@
+package com.progms;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class StringFrequency {
+	
+	
+	public static void main(String[] args) {
+		
+	
+		
+		LocalDate leap = LocalDate.of(2023, 01, 01);
+		System.out.println(leap.isLeapYear());
+		
+		
+		
+		List<String>fruits = new ArrayList<String>(Arrays.asList("Apple", "guava", "apple", "grapes","mango"));
+		
+		
+		Map<String, Long > f = fruits 
+			.stream()
+			.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		
+		System.out.println(f);
+		
+		
+		String fruit = "Apple";
+		
+		
+		Map<Character, Long >charfreq = fruit
+			.toLowerCase()
+			.chars()
+			.mapToObj(c->(char )c )
+			.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+			System.out.println(charfreq);
+			
+			int[] a = {1,2,3,4,5};
+			Arrays
+			.stream(a)
+			.filter(n -> n%2 ==0)
+			.forEach(n->System.out.println(n));
+		
+	}
+
+	private static char[] getDayOfYear() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

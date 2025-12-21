@@ -1,0 +1,11 @@
+package com;
+
+public interface C {
+	
+	public void m1();
+	public void m2();
+	
+	
+	
+
+}
